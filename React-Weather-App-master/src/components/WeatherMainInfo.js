@@ -22,9 +22,9 @@ function WeatherMainInfo(props) {
     navigator.geolocation.getCurrentPosition(function (position) {
       fetch(
         "https://api.openweathermap.org/data/2.5/weather?lat=" +
-          14.6091 +
+          position.coords.latitude +
           "&lon=" +
-          121.0223 +
+          position.coords.longitude +
           "&appid=" +
           props.api
       )
